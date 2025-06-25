@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,11 +17,17 @@ export class AppComponent {
   title = 'Ordering/Tracking';
   isLoginPage = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private renderer: Renderer2) {
     // Listen to route changes to determine if we're on the login page
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
+      const url = event.urlAfterRedirects;
+      if (url.includes('custom')) {
+        this.setTheme('custom');
+      } else {
+        this.setTheme('light');
+      }
       this.isLoginPage = event.url === '/login' || event.url === '/';
     });
 
@@ -39,5 +45,12 @@ export class AppComponent {
 
   navigateToLogin() {
     this.router.navigate(['/login']);
+  }
+
+
+  setTheme(themeClass: string): void {
+    const body = document.body;
+    body.classList.remove('.custom', '.light');
+    this.renderer.addClass(body, themeClass);
   }
 }

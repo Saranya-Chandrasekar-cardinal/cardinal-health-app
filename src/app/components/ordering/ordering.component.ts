@@ -52,7 +52,8 @@ import {
   styleUrl: './ordering.component.scss'
 })
 export class OrderingComponent implements OnInit {
-  currentView: 'initial' | 'list' | 'new-edit' = 'initial';
+  //currentView: 'initial' | 'list' | 'new-edit' = 'initial';
+  currentView = 'list';
   
   // Navigation items for sidebar
   navItems: NavItem[] = [
@@ -102,7 +103,7 @@ export class OrderingComponent implements OnInit {
     this.currentView = 'new-edit';
     this.showComponents = false;
   }  backToList() {
-    this.currentView = 'initial';
+    this.currentView = 'list';
     this.showComponents = false;
   }
 
