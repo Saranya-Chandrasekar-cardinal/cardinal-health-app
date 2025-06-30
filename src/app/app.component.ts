@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Ordering/Tracking';
+  title = 'Login';//'Ordering/Tracking';
   isLoginPage = false;
 
   constructor(private router: Router) {

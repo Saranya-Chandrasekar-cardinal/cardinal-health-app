@@ -1,11 +1,13 @@
 // Component-specific styles - layout handled by PageLayoutComponent
+
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex: 1;
-  margin-top: 20px;
-  padding-top: 20px;
+  display: block;
+  // display: flex;
+  // justify-content: center;
+  // align-items: flex-start;
+  // flex: 1;
+  // margin-top: 20px;
+  // padding-top: 20px;
 }
 
 .login-card {
@@ -13,10 +15,15 @@
   max-width: 90%;
 }
 
+.login-form-wrapper{
+  width:300px;
+  max-width: 90%;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
 }
 
 // Page content styling
@@ -32,3 +39,18 @@ p {
   margin-top: 0;
   line-height: 1.4;
 }
+
+.description{
+  font-size: 14px;
+  font-weight: 400;
+}
+.header{
+  font-size:16px;
+  font-weight:600;
+}
+
+
+
+
+
+

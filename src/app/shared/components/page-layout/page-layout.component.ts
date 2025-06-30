@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 
     <footer class="footer">
       <div class="footer-content">
-        Footer Content
+        ©2024 Cardinal Health  |  Privacy Policy   |   Terms of Use 
       </div>
     </footer>
   `,

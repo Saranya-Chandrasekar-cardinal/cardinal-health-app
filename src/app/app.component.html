@@ -1,21 +1,33 @@
-<mat-toolbar color="primary">
-  <span>Ordering & Tracking</span>
+<mat-toolbar><!--color="primary"-->
+  <span class="brand-logo-wrapper">
+    <img class="logo-img" src="../assets/images/brand-logo.png" alt="Brand Logo" />
+    <span class="page-title">{{title}}</span>
+  </span>
+
   <span class="spacer"></span>
   <!--
   <button mat-button (click)="navigateToHome()">Home</button>
   <button mat-button (click)="navigateToOrdering()">Orders</button>
   <button mat-button (click)="navigateToLogin()">Login</button>
   -->
-  <!-- Only show user info and logout when NOT on login page -->
-  <button mat-button *ngIf="!isLoginPage">Sam Ford</button>
-  <button mat-icon-button (click)="navigateToLogin()" *ngIf="!isLoginPage">
+  <div class="pharmacy-info">
+    <span class="label">Pharmacy:</span>
+    <span class="data">CAH | Columbus, OH</span>
+  </div>
+  <span class="line"></span>
+  <!-- Only show user info and logout when NOT on login page  *ngIf="!isLoginPage"-->
+  <div class="username-div">
+    <span class="username">Sam Ford</span>
+    <span class="circle-btn"> SF</span>
+  </div>
+<span class="line"></span>
+  <button mat-icon-button (click)="navigateToLogin()">
     <mat-icon>logout</mat-icon>
   </button>
-  <span *ngIf="!isLoginPage">SF</span>
+  <span class="logout-text">Logout</span>
+
 </mat-toolbar>
 
-<div class="pharmacy-info">
-  Pharmacy: CAN | Columbus, OH
-</div>
+
 
 <router-outlet></router-outlet>
