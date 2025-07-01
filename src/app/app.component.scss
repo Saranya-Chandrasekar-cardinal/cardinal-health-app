@@ -1,3 +1,4 @@
+@import "../styles/breakpoints";
 .spacer {
   flex: 1 1 auto;
 }
@@ -93,9 +94,151 @@ mat-toolbar {
 }
 
 .line {
-     padding: 0px 0.25px 0px 0.25px;
-  background:  #948A85;
+  padding: 0px 0.25px 0px 0.25px;
+  background: #948a85;
   margin: 1px 5px;
   width: 1.014px;
-height: 29.73px;
+  height: 29.73px;
+}
+
+.desktop-header-bar {
+  display: flex;
+  @include respond-to(xs) {
+    display: none;
+  }
+  @include respond-to(sm) {
+    display: none;
+  }
+  @include respond-to(md) {
+    .page-title {
+      font-family: Open Sans;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+    .pharmacy-info {
+      .label {
+        font-family: Open Sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: right;
+        vertical-align: bottom;
+      }
+      .data {
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: right;
+        vertical-align: bottom;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-offset: 0%;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+      }
+    }
+
+    .username-div {
+      font-family: Open Sans;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: right;
+    }
+    .logout-text {
+      font-family: Open Sans;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+    }
+  }
+  @include respond-to(lg) {
+    .page-title {
+      font-family: Open Sans;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+    .pharmacy-info {
+      .label {
+        font-family: Open Sans;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: right;
+        vertical-align: bottom;
+      }
+      .data {
+        font-family: Open Sans;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: right;
+        vertical-align: bottom;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-offset: 0%;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+      }
+    }
+
+    .username-div {
+      font-family: Open Sans;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+      text-align: right;
+    }
+    .logout-text {
+      font-family: Open Sans;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0px;
+    }
+  }
+}
+
+.mobile-header-bar {
+  display: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
+
+  .brand-name,
+  .page-title {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+  .brand-name {
+    color: #e42035;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  @include respond-to(xs) {
+    display: flex;
+  }
+  @include respond-to(sm) {
+    display: flex;
+  }
 }

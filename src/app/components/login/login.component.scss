@@ -1,5 +1,5 @@
 // Component-specific styles - layout handled by PageLayoutComponent
-
+@import '../../../styles/breakpoints';
 .login-container {
   display: block;
   // display: flex;
@@ -15,8 +15,8 @@
   max-width: 90%;
 }
 
-.login-form-wrapper{
-  width:300px;
+.login-form-wrapper {
+  width: 300px;
   max-width: 90%;
 }
 
@@ -40,17 +40,38 @@ p {
   line-height: 1.4;
 }
 
-.description{
+.description {
   font-size: 14px;
   font-weight: 400;
 }
-.header{
-  font-size:16px;
-  font-weight:600;
+.header {
+  font-size: 16px;
+  font-weight: 600;
 }
 
-
-
-
-
-
+.login-container {
+  @include respond-to(xs) {
+    .header {
+      font-family: Inter;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+    .description {
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+  }
+  @include respond-to(sm) {
+  }
+  @include respond-to(md) {
+  }
+  @include respond-to(lg) {
+  }
+  @include respond-to(xl) {
+  }
+}
